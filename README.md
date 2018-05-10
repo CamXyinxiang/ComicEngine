@@ -37,7 +37,7 @@ Jre1.8.0_161
 
 王垠翔（yinxiang wang） 
 git:https://github.com/CamXyinxiang
-邮箱：
+邮箱：491064068@qq.com
 
 ## 感谢
 
