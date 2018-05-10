@@ -22,7 +22,7 @@ Jre1.8.0_161
 
 * Maven 方便的jar包管理
 * Spring Boot 自动配置的MVC框架
-* Thymeleaf 个人感觉相比JSP更加方便好用
+* Thymeleaf 模板引擎，代码可读性强于JSP
 * Hibernate 全自动orm框架减少了冗杂的SQL语句编写
 * Bootstrap 友好的前端界面
 * CSS 界面个性化设置
