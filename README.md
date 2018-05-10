@@ -20,12 +20,14 @@ Jre1.8.0_161
 
 ## 运用技术
 
-* Maven 方便的jar包管理
 * Spring Boot 自动配置的MVC框架
 * Thymeleaf 模板引擎，代码可读性强于JSP
+* Spring Security 管理用户登陆，分配不同权限。只有拥有管理者权限才可添加商品
+* MySQL 数据库，存储用户及管理者数据
 * Hibernate 全自动orm框架减少了冗杂的SQL语句编写
 * Bootstrap 友好的前端界面
 * CSS 界面个性化设置
+* Maven 方便的jar包管理
 
 ## 版本
 
@@ -33,7 +35,9 @@ Jre1.8.0_161
 
 ## 作者
 
-王垠翔（yinxiang wang） https://github.com/CamXyinxiang
+王垠翔（yinxiang wang） 
+git:https://github.com/CamXyinxiang
+邮箱：
 
 ## 感谢
 
