@@ -52,7 +52,6 @@ public class CheckoutController {
 	@Autowired
 	private JavaMailSender mailSender;
 	
-	
 	@Autowired
 	private BillingAddressService billingAddressService;
 	
@@ -81,7 +80,6 @@ public class CheckoutController {
 		}
 		
 		List<CartItem> cartItemList = cartItemService.findByShoppingCart(user.getShoppingCart());
-		
 		if(cartItemList.size() == 0) {
 			model.addAttribute("emptyCart", true);
 			return "forward:/shoppintCart/cart";
@@ -168,29 +166,15 @@ public class CheckoutController {
 			Principal principal,Model model
 			) {
 		
-		
-		
-		
 		ShoppingCart shoppingCart=userService.findByUsername(principal.getName()).getShoppingCart();
-
-
-		
 		
 		if(billingSameAsShipping.equals("true")){
 			billingAddress=billingAddressService.setByShippingAddress(shippingAddress,billingAddress);
 		}
 		
-		
-		
 		User user=userService.findByUsername(principal.getName());
-		
-		
 		Order order=new Order();
-		
-		
 		order=orderService.setOrder(order, shippingAddress, payment, billingAddress, shoppingCart, shippingMethod, user);
-		
-		
 		
 		return "orderPlaced";
 	}
@@ -239,9 +223,7 @@ public class CheckoutController {
 				model.addAttribute("emptyPaymentList", false);
 			}
 			
-			
 			model.addAttribute("emptyShippingList", false);
-			
 			
 			return "checkout";
 		}
