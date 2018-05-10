@@ -1,89 +1,45 @@
 
-# Project Title
+# Comic Engine
 
-One Paragraph of project description goes here
+这是一个网上动漫购物网站。由Spring Boot编写，能够实现用户注册登陆，浏览商品，管理购物车，管理个人付款信息及邮寄地址信息等功能。
 
-## Getting Started
+## 如何使用
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+在eclipse中新建一个spring boot项目，选择java 8 version，maven project type。选择项目的执行环境为javaSE-1.8(jre1.8.0_161)。下载本zip文件，解压后将src文件夹及pom文件拷贝到eclipse的项目中并覆盖。创建一个数据库schema，修改application.properties文件中的数据库url并将其指向新建的schema，所有表会在运行期间自动生成。打开MYSQL服务，在eclipse中选择项目run as->Spring Boot App,打开浏览器输入 http://localhost:8080/ 。如果修改过tomcat端口则将上述8080改为修改后的端口号即可。
 
-### Prerequisites
-
-What things you need to install the software and how to install them
+### 所需软件
 
 ```
-Give examples
+eclipse
+MYSQL
+java 8
+Spring Boot 1.43
+javaSE-1.8
+jre1.8.0_161
 ```
 
-### Installing
+## 运用技术
 
-A step by step series of examples that tell you have to get a development env running
+* Maven 方便的jar包管理
+* Spring Boot 自动配置的MVC框架
+* Thymeleaf 个人感觉相比JSP更加方便好用
+* Hibernate 全自动orm框架减少了冗杂的SQL语句编写
+* Bootstrap 友好的前端界面
+* CSS 界面个性化设置
 
-Say what the step will be
+## 版本
 
-```
-Give the example
-```
+1.0.0
 
-And repeat
+## 作者
 
-```
-until finished
-```
+王垠翔（yinxiang wang） https://github.com/CamXyinxiang
 
-End with an example of getting some data out of the system or using it for a little demo
+## 感谢
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* udemy网上课程
+* Google
+* Stack Overflow
+* CSDN
+* Prof.Ubal
 
