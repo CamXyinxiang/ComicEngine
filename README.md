@@ -7,15 +7,15 @@
 
 在eclipse中新建一个spring boot项目，选择java 8 version，maven project type。选择项目的执行环境为javaSE-1.8(jre1.8.0_161)。下载本zip文件，解压后将src文件夹及pom文件拷贝到eclipse的项目中并覆盖。创建一个数据库schema，修改application.properties文件中的数据库url并将其指向新建的schema，所有表会在运行期间自动生成。打开MYSQL服务，在eclipse中选择项目run as->Spring Boot App,打开浏览器输入 http://localhost:8080/ 。如果修改过tomcat端口则将上述8080改为修改后的端口号即可。
 
-### 所需软件
+### 所需软件及运行环境
 
 ```
-eclipse
+Eclipse
 MYSQL
-java 8
+Java 8
 Spring Boot 1.43
-javaSE-1.8
-jre1.8.0_161
+JavaSE-1.8
+Jre1.8.0_161
 ```
 
 ## 运用技术
