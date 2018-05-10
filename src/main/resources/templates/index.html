@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1000/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<body>
+	<div th:replace="common/header :: navbar" />
+
+	<div class="container">
+		
+		<div class="row">
+			<a href="/aboutMe">
+			  <img class="img-responsive center-block" src="/image/homeAdd.jpg"  align="middle"/>
+			</a>
+		</div>
+		
+		<div class="row">
+			<a href="/aboutMe">
+				<img class="img-responsive center-block" src="/image/home.jpg"  align="middle"/>
+			</a>		
+		</div>
+		
+		<div>
+			<div class="home-headline">
+			<a href="/aboutMe">
+			<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
+				<span style="color: #FFFFFF;font-size:20px;">
+				  关于我
+				</span>
+			</a>
+			</div>
+			<hr style="margin-top: -15px;" />
+		</div>
+
+<!--
+		<form th:action="@{/test}" method="post">
+			<div class="checkbox">
+				<label> <input id="asd"
+					type="checkbox" name="asd" value="qwe" />
+					just a test
+				</label>
+			</div>
+			<button type="submit">submit</button>
+		</form>
+-->
+	</div>
+	<div th:replace="common/header :: body-bottom-scripts" />
+</body>
+</html>

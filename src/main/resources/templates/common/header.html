@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head th:fragment="common-header">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>Comic Engine</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+
+<link href="/css/non-responsive.css" rel="stylesheet" />
+
+<!-- data table -->
+<link th:href="@{/css/jquery.dataTables.min.css}" rel="stylesheet" />
+<link th:href="@{/css/dataTables.bootstrap.min.css}" rel="stylesheet" />
+
+<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet" />
+
+<!-- Custom styles for this template -->
+<link href="/css/style.css" rel="stylesheet" />
+
+<link rel="icon" href="/image/hat.jpg" />
+</head>
+
+<body>
+	<div th:fragment="navbar">
+		<!-- Static navbar -->
+		<nav class="page-top navbar navbar-default navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Comic Engine</a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav navbar-left">
+						<li class="dropdown"><a th:href="@{/comicShelf}" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Comic<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a th:href="@{/comicShelf}">Item List</a></li>
+								<li><a th:href="@{/recommendation}">Today's Recommendation</a></li>
+								<li><a th:href="@{/trend}">Trend</a></li>
+
+							</ul></li>
+							
+						<form th:action="@{/searchResult}"  method="post"   class="navbar-form">
+							<div class="form-group">
+								<input type="text" name="searchTitle" class="form-control"
+									placeholder="title" />
+							</div>
+							<button type="submit" class="btn btn-default">Search</button>
+						</form>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					
+			
+					<li sec:authorize="hasRole('ROLE_MANAGER')"  class="dropdown">
+					<a th:href="@{/comicShelf}" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">MANAGE COMIC<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a th:href="@{/comic/comicList}">COMIC LIST</a></li>
+								<li><a th:href="@{/comic/add}">ADD COMIC</a></li>
+					</ul></li>
+						
+						<li><a th:href="@{/shoppingCart/cart}">SHOPPING CART</a></li>
+						<li><a sec:authorize="isAnonymous()" th:href="@{/login}">LOG IN</a></li>
+						<li><a sec:authorize="isAuthenticated()" th:href="@{/myProfile}">MY ACCOUNT</a></li>
+						<li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">LOGOUT</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	
+	<div th:fragment="body-bottom-scripts">
+	<script th:src="@{/js/jquery.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	
+	<script th:src="@{/js/scripts.js}"></script>
+	
+	<!-- data table -->
+		<script th:src="@{/js/jquery.dataTables.min.js}"></script>
+		<script th:src="@{/js/dataTables.bootstrap.min.js}"></script>
+	</div>
+</body>
+</html>
